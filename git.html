@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Git Commands Reference</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #343a40; /* Dark background */
+            color: #f8f9fa; /* Light text */
+        }
+        h1 {
+            color: #f8f9fa;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #007bff; /* Bootstrap primary color */
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        .command {
+            background-color: #495057; /* Darker card background */
+            border: 1px solid #6c757d; /* Light border */
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+        }
+        .command:hover {
+            background-color: #6c757d; /* Lighter on hover */
+        }
+        code {
+            background-color: #eaeaea; /* Light background for code */
+            color: #343a40; /* Dark text for code */
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Complete Git Commands Reference</h1>
+
+    <h2>Basic Commands</h2>
+    <div class="command">
+        <strong><code>git init</code></strong> - Initializes a new Git repository.
+    </div>
+    <div class="command">
+        <strong><code>git clone &lt;repository&gt;</code></strong> - Clones an existing repository.
+    </div>
+    <div class="command">
+        <strong><code>git status</code></strong> - Displays the state of the working directory and staging area.
+    </div>
+    <div class="command">
+        <strong><code>git add &lt;file&gt;</code></strong> - Stages changes in the specified file.
+    </div>
+    <div class="command">
+        <strong><code>git commit -m "message"</code></strong> - Commits the staged changes with a message.
+    </div>
+    <div class="command">
+        <strong><code>git log</code></strong> - Shows the commit history for the current branch.
+    </div>
+    <div class="command">
+        <strong><code>git diff</code></strong> - Shows changes between commits, commit and working tree, etc.
+    </div>
+    <div class="command">
+        <strong><code>git branch</code></strong> - Lists all branches in the repository.
+    </div>
+    <div class="command">
+        <strong><code>git branch &lt;branch-name&gt;</code></strong> - Creates a new branch.
+    </div>
+    <div class="command">
+        <strong><code>git checkout &lt;branch-name&gt;</code></strong> - Switches to the specified branch.
+    </div>
+    <div class="command">
+        <strong><code>git merge &lt;branch-name&gt;</code></strong> - Merges the specified branch into the current branch.
+    </div>
+    <div class="command">
+        <strong><code>git pull</code></strong> - Fetches and merges changes from the remote repository.
+    </div>
+    <div class="command">
+        <strong><code>git push</code></strong> - Uploads local commits to the remote repository.
+    </div>
+    <div class="command">
+        <strong><code>git remote -v</code></strong> - Lists remote repositories.
+    </div>
+    <div class="command">
+        <strong><code>git remote add &lt;name&gt; &lt;url&gt;</code></strong> - Adds a new remote repository.
+    </div>
+    <div class="command">
+        <strong><code>git fetch</code></strong> - Downloads changes from the remote repository without merging.
+    </div>
+    <div class="command">
+        <strong><code>git reset &lt;file&gt;</code></strong> - Unstages a file, reverting it back to the last committed state.
+    </div>
+    <div class="command">
+        <strong><code>git stash</code></strong> - Temporarily saves changes that are not ready to be committed.
+    </div>
+    <div class="command">
+        <strong><code>git stash pop</code></strong> - Restores the most recently stashed changes.
+    </div>
+    <div class="command">
+        <strong><code>git tag &lt;tag-name&gt;</code></strong> - Creates a tag for a specific commit.
+    </div>
+
+    <h2>Advanced Commands</h2>
+    <div class="command">
+        <strong><code>git rebase &lt;branch&gt;</code></strong> - Reapplies commits from the current branch on top of another branch.
+    </div>
+    <div class="command">
+        <strong><code>git cherry-pick &lt;commit&gt;</code></strong> - Applies the changes from a specific commit to the current branch.
+    </div>
+    <div class="command">
+        <strong><code>git revert &lt;commit&gt;</code></strong> - Creates a new commit that undoes the changes from a specific commit.
+    </div>
+    <div class="command">
+        <strong><code>git clean</code></strong> - Removes untracked files and directories.
+    </div>
+    <div class="command">
+        <strong><code>git submodule</code></strong> - Manages submodules (repositories within a repository).
+    </div>
+    <div class="command">
+        <strong><code>git filter-branch</code></strong> - Rewrites the commit history.
+    </div>
+    <div class="command">
+        <strong><code>git bisect</code></strong> - Finds the commit that introduced a bug.
+    </div>
+    <div class="command">
+        <strong><code>git worktree</code></strong> - Manages multiple working trees.
+    </div>
+
+    <h2>Gitignore</h2>
+    <div class="command">
+        <strong><code>git ignore &lt;pattern&gt;</code></strong> - Ignores files or directories matching the specified pattern.
+    </div>
+    <div class="command">
+        <strong><code>git ignore --global &lt;pattern&gt;</code></strong> - Ignores files or directories globally.
+    </div>
+
+    <h2>Git Hooks</h2>
+    <div class="command">
+        <strong><code>git hooks</code></strong> - Custom scripts that run at specific points in the Git workflow.
+    </div>
+
+    <h2>Git Configuration Commands</h2>
+    <div class="command">
+        <strong><code>git config &lt;key&gt; &lt;value&gt;</code></strong> - Sets a configuration option.
+    </div>
+    <div class="command">
+        <strong><code>git config --global &lt;key&gt; &lt;value&gt;</code></strong> - Sets a global configuration option.
+    </div>
+    <div class="command">
+        <strong><code>git config --global --get-all</code></strong> - Displays all globally configured options.
+    </div>
+    <div class="command">
+        <strong><code>git config --global --get-all alias</code></strong> - Displays all globally configured aliases.
+    </div>
+    <div class="command">
+        <strong><code>git config --global --get-all core</code></strong> - Displays all globally configured core settings.
+    </div>
+    <div class="command">
+        <strong><code>git config --global --get-all credential</code></strong> - Displays all globally configured credential settings.
+    </div>
+    <div class="command">
+        <strong><code>git config --global --get-all safe.directory</code></strong> - Displays all globally configured safe directories.
+    </div>
+    <div class="command">
+        <strong><code>git config --global --get-all user</code></strong> - Displays all globally configured user settings.
+    </div>
+
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

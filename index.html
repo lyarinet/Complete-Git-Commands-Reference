@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Complete Commands Reference</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Complete Git Commands Reference</h1>
+
+        <div class="accordion" id="gitCommandsAccordion">
+
+            <!-- Setup & Config -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSetup">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSetup" aria-expanded="true" aria-controls="collapseSetup">
+                        Setup & Config
+                    </button>
+                </h2>
+                <div id="collapseSetup" class="accordion-collapse collapse show" aria-labelledby="headingSetup" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git config --global user.name "Your Name"</code> - Set global username.</li>
+                            <li><code>git config --global user.email "you@example.com"</code> - Set global email.</li>
+                            <li><code>git config --list</code> - View all config settings.</li>
+                            <li><code>git config --global color.ui auto</code> - Enable colored output.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Starting a Project -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingStarting">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStarting" aria-expanded="false" aria-controls="collapseStarting">
+                        Starting a Project
+                    </button>
+                </h2>
+                <div id="collapseStarting" class="accordion-collapse collapse" aria-labelledby="headingStarting" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git init</code> - Initialize a new Git repository.</li>
+                            <li><code>git clone &lt;url&gt;</code> - Clone an existing repository.</li>
+                            <li><code>git remote add origin &lt;url&gt;</code> - Link to a remote repository.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Basic Snapshotting -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBasic">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasic" aria-expanded="false" aria-controls="collapseBasic">
+                        Basic Snapshotting
+                    </button>
+                </h2>
+                <div id="collapseBasic" class="accordion-collapse collapse" aria-labelledby="headingBasic" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git add &lt;file&gt;</code> - Stage a specific file.</li>
+                            <li><code>git add .</code> - Stage all files in current directory.</li>
+                            <li><code>git commit -m "Message"</code> - Commit changes with a message.</li>
+                            <li><code>git commit -am "Message"</code> - Stage and commit all modified files.</li>
+                            <li><code>git status</code> - Show working tree status.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branching & Merging -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBranching">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBranching" aria-expanded="false" aria-controls="collapseBranching">
+                        Branching & Merging
+                    </button>
+                </h2>
+                <div id="collapseBranching" class="accordion-collapse collapse" aria-labelledby="headingBranching" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git branch</code> - List all branches.</li>
+                            <li><code>git branch &lt;branch-name&gt;</code> - Create a new branch.</li>
+                            <li><code>git checkout &lt;branch-name&gt;</code> - Switch to a branch.</li>
+                            <li><code>git merge &lt;branch-name&gt;</code> - Merge specified branch into current.</li>
+                            <li><code>git branch -d &lt;branch-name&gt;</code> - Delete a branch.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remote Repositories -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRemote">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRemote" aria-expanded="false" aria-controls="collapseRemote">
+                        Remote Repositories
+                    </button>
+                </h2>
+                <div id="collapseRemote" class="accordion-collapse collapse" aria-labelledby="headingRemote" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git remote -v</code> - List all remote connections.</li>
+                            <li><code>git remote add origin &lt;url&gt;</code> - Add a remote repository.</li>
+                            <li><code>git pull origin &lt;branch&gt;</code> - Pull changes from remote branch.</li>
+                            <li><code>git push origin &lt;branch&gt;</code> - Push changes to remote branch.</li>
+                            <li><code>git push -u origin &lt;branch&gt;</code> - Set upstream for future pushes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inspecting & Comparing -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingInspecting">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInspecting" aria-expanded="false" aria-controls="collapseInspecting">
+                        Inspecting & Comparing
+                    </button>
+                </h2>
+                <div id="collapseInspecting" class="accordion-collapse collapse" aria-labelledby="headingInspecting" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git log</code> - Show commit history.</li>
+                            <li><code>git log --oneline</code> - Show one-line commit history.</li>
+                            <li><code>git diff</code> - Show changes not staged yet.</li>
+                            <li><code>git diff --staged</code> - Show staged changes.</li>
+                            <li><code>git show &lt;commit&gt;</code> - Show details of a specific commit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Undoing Changes -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingUndoing">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUndoing" aria-expanded="false" aria-controls="collapseUndoing">
+                        Undoing Changes
+                    </button>
+                </h2>
+                <div id="collapseUndoing" class="accordion-collapse collapse" aria-labelledby="headingUndoing" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git restore &lt;file&gt;</code> - Discard changes in a file.</li>
+                            <li><code>git reset &lt;file&gt;</code> - Unstage a file.</li>
+                            <li><code>git reset --soft HEAD~1</code> - Undo last commit (keep changes staged).</li>
+                            <li><code>git reset --hard HEAD~1</code> - Undo last commit (discard changes).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stashing -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingStashing">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStashing" aria-expanded="false" aria-controls="collapseStashing">
+                        Stashing
+                    </button>
+                </h2>
+                <div id="collapseStashing" class="accordion-collapse collapse" aria-labelledby="headingStashing" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git stash</code> - Stash current changes.</li>
+                            <li><code>git stash apply</code> - Apply stashed changes.</li>
+                            <li><code>git stash list</code> - List all stashes.</li>
+                            <li><code>git stash drop</code> - Drop a stash.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tagging -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTagging">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTagging" aria-expanded="false" aria-controls="collapseTagging">
+                        Tagging
+                    </button>
+                </h2>
+                <div id="collapseTagging" class="accordion-collapse collapse" aria-labelledby="headingTagging" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git tag &lt;tag-name&gt;</code> - Create a lightweight tag.</li>
+                            <li><code>git tag -a &lt;tag-name&gt; -m "Message"</code> - Create an annotated tag.</li>
+                            <li><code>git tag -d &lt;tag-name&gt;</code> - Delete a tag.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Commands -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingAdvanced">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced">
+                        Advanced Commands
+                    </button>
+                </h2>
+                <div id="collapseAdvanced" class="accordion-collapse collapse" aria-labelledby="headingAdvanced" data-bs-parent="#gitCommandsAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><code>git rebase &lt;branch&gt;</code> - Reapply commits on top of another base branch.</li>
+                            <li><code>git cherry-pick &lt;commit&gt;</code> - Apply changes from a specific commit.</li>
+                            <li><code>git bisect start</code> - Start binary search to find the commit causing a bug.</li>
+                            <li><code>git submodule add &lt;url&gt;</code> - Add a new submodule.</li>
+                            <li><code>git submodule update --init</code> - Initialize, fetch, and checkout submodules.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
